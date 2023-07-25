@@ -9,5 +9,5 @@
 #include <unistd.h>
 #include <errno.h>
 #include <stdio.h>
-#include <string.h>  //use the built in functions if it not work remove the lib and code it yourself (strlen/strcpy....)
+#include <string.h>
 
