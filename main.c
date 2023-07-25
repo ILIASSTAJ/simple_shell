@@ -1,34 +1,40 @@
 #include "shell.h"
 
+/**
+ * main - implements a simple shell
+ *
+ * Return: EXIT_SUCCESS.
+ */
 int main(void)
 {
-        char *buffer;
-	char *token;
+	char *input;
 	char **args;
-        size_t buffer_size;
-        int n_chars, status;
-	pid_t my_pid;
+	int status;
 
-        while(1)
-        {
+	/* Register signal handlers */
+	signal(SIGINT, handle_sigint);
+	signal(SIGQUIT, handle_sigquit);
+	signal(SIGTSTP, handle_sigstp);
 
-                write(1, "$ ", 2);
-                n_chars = getline(&buffer, &buffer_size, stdin);
-		args = malloc(sizeof(char *) * 1024);
-		token = strtok(buffer, " \t\n");
-		args[0] = token;
-		my_pid = fork();
-		if(my_pid == 0)
+	do {
+		input = get_input();
+		if (!input || !*input)/* EOF detected, exit the loop */
+			break;
+
+		args = tokenize_input(input);
+		if (!args || !*args)
 		{
-			if(execve(args[0], args, NULL) == -1)
-				perror("execve");
-		}else{
-			wait(&status);
+			free(input);
+			free_tokens(args);
+			continue;
 		}
-		free(args);
-	}
+		status = execute(args);
+		free(input);
+		free_tokens(args);
 
+		/* Set status to 1 to continue the loop */
+		status = 1;
+	} while (status);
 
-
-	return 0;
+	return (EXIT_SUCCESS);
 }
