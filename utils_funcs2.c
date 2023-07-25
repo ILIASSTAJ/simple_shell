@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _strcpy - copies a string
+ * _strcpy: - copies a string
  * @dest: the destination
  * @src: the source
  *
@@ -9,6 +9,7 @@
  */
 char *_strcpy(char *dest, char *src)
 {
+
 	int i = 0;
 
 	if (dest == src || src == 0)
@@ -19,11 +20,11 @@ char *_strcpy(char *dest, char *src)
 		i++;
 	}
 	dest[i] = 0;
-	return (dest);
+	return dest;
 }
 
 /**
- * _strcat - concatenates two strings
+ * _strcat : - concatenates two strings
  * @dest: the destination buffer
  * @src: the source buffer
  *
@@ -31,6 +32,7 @@ char *_strcpy(char *dest, char *src)
  */
 char *_strcat(char *dest, const char *src)
 {
+
 	char *ret = dest;
 
 	while (*dest)
@@ -38,17 +40,18 @@ char *_strcat(char *dest, const char *src)
 	while (*src)
 		*dest++ = *src++;
 	*dest = *src;
-	return (ret);
+	return ret;
 }
 
 /**
- * _strdup - duplicates a string
+ * _strdup :- duplicates a string
  * @str: the string to duplicate
  *
  * Return: pointer to the duplicated string
  */
 char *_strdup(const char *str)
 {
+
 	int length = 0;
 	char *ret;
 
@@ -61,22 +64,23 @@ char *_strdup(const char *str)
 		return (NULL);
 	for (length++; length--;)
 		ret[length] = *--str;
-	return (ret);
+	return ret;
 }
 
 /**
- *_putchar - writes the character c to stdout
+ *_putchar :- writes the character c to stdout
  * @c: The character to print
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
 int _putchar(char c)
 {
+
 	return (write(1, &c, 1));
 }
 
 /**
- * _strspn - a function that gets the
+ * _strspn: - a function that gets the
  *           length of a prefix substring
  *
  * @s: pointer to string input
@@ -99,5 +103,5 @@ unsigned int _strspn(char *s, char *accept)
 			return (i);
 	}
 
-	return (i);
+	return i;
 }

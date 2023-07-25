@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * execute - Execute a command with arguments.
+ * execute :- Execute a command with arguments.
  * @argv: An array of strings containing the command and its arguments.
  *
  * Return: The exit status of the executed command.
@@ -21,7 +21,7 @@ int execute(char **argv)
 	if (id < 0)
 	{
 		_puterror("fork");
-		return (1);
+		return 1;
 	}
 	if (id == -1)
 		perror(argv[0]), free_tokens(argv), free_last_input();
@@ -46,5 +46,5 @@ int execute(char **argv)
 			waitpid(id, &status, WUNTRACED);
 		} while (!WIFEXITED(status) && !WIFSIGNALED(status));
 	}
-	return (status);
+	return status;
 }

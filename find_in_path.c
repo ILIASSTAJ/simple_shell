@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * find_in_path - Looks for a command in each directory specified in the PATH
+ * find_in_path:  - Looks for a command in each directory specified in the PATH
  *                environment variable
  * @command: pointer to `command` string to look for.
  *
@@ -16,10 +16,10 @@ char *find_in_path(char *command)
 
 	path = get_path();
 	if (!path)
-		return (NULL);
+		return NULL;
 	dir = tokenize(path, PATH_SEPARATOR);
 	if (!dir)
-		return (NULL);
+		return NULL;
 	for (i = 0; dir[i]; i++)
 	{
 		_memset(buf, 0, PATH_MAX_LENGTH);
@@ -32,12 +32,12 @@ char *find_in_path(char *command)
 			free_tokens(dir);
 			ret = malloc(sizeof(char) * (strlen(buf) + 1));
 			if (!ret)
-				return (NULL);
+				return NULL;
 			strcpy(ret, buf);
 			return (ret);
 		}
 	}
 	if (stat_ret == -1)
 		free_tokens(dir);
-	return (NULL);
+	return NULL;
 }

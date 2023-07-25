@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * main - implements a simple shell
+ * main : - implements a simple shell
  *
  * Return: EXIT_SUCCESS.
  */
@@ -36,5 +36,6 @@ int main(void)
 		status = 1;
 	} while (status);
 
-	return (EXIT_SUCCESS);
+
+	return EXIT_SUCCESS;
 }

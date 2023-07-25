@@ -1,13 +1,14 @@
 #include "shell.h"
 
 /**
- * _strlen - returns the length of a string
+ * _strlen :: returns the length of a string
  * @s: the string whose length to check
  *
  * Return: integer length of string
  */
 int _strlen(const char *s)
 {
+
 	int i = 0;
 
 	if (!s)
@@ -15,11 +16,12 @@ int _strlen(const char *s)
 
 	while (*s++)
 		i++;
-	return (i);
+	return i;
 }
 
+
 /**
- * _strcmp - Compare two strings.
+ * _strcmp :- Compare two strings.
  * @s1: The first string to compare.
  * @s2: The second string to compare.
  * Return: 0 if @s1 and @s2 are equal,
@@ -28,6 +30,7 @@ int _strlen(const char *s)
  */
 int _strcmp(const char *s1, const char *s2)
 {
+
 	while (*s1 != '\0' && *s2 != '\0' && *s1 == *s2)
 	{
 		s1++;
@@ -48,6 +51,8 @@ int _strcmp(const char *s1, const char *s2)
  */
 int _strncmp(const char *s1, const char *s2, size_t n)
 {
+	
+	
 	unsigned char c1, c2;
 
 	while (n-- > 0)
@@ -61,18 +66,20 @@ int _strncmp(const char *s1, const char *s2, size_t n)
 			break;
 	}
 
-	return (0);
+	return 0;
 }
 
 /**
- * _strstr - checks if needle starts with haystack
+ * _strstr: - checks if needle starts with haystack
  * @haystack: string to search
  * @needle: the substring to find
+ *
  *
  * Return: address of next char of haystack or NULL
  */
 char *_strstr(char *haystack, char *needle)
 {
+
 	int i;
 
 	for (i = 0; haystack[i] != '\0'; i++)
@@ -95,11 +102,11 @@ char *_strstr(char *haystack, char *needle)
 			}
 		}
 	}
-	return (NULL);
+	return NULL;
 }
 
 /**
- * _strchr - a function that locates a character in a string
+ * _strchr :- a function that locates a character in a string
  *
  * @s: pointer to our string array input
  * @c: character to locate from input array
@@ -109,6 +116,7 @@ char *_strstr(char *haystack, char *needle)
 
 char *_strchr(char *s, char c)
 {
+
 	while (*s != '\0')
 	{
 		if (*s == c)
@@ -123,5 +131,5 @@ char *_strchr(char *s, char c)
 	if (*s == c)
 		return (s);
 	/*return null if not found*/
-	return (NULL);
+	return NULL;
 }
