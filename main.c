@@ -37,5 +37,5 @@ int main(void)
 	} while (status);
 
 
-	return EXIT_SUCCESS;
+	return (EXIT_SUCCESS);
 }

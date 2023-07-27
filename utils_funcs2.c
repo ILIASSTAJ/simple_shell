@@ -20,7 +20,7 @@ char *_strcpy(char *dest, char *src)
 		i++;
 	}
 	dest[i] = 0;
-	return dest;
+	return (dest);
 }
 
 /**
@@ -40,7 +40,7 @@ char *_strcat(char *dest, const char *src)
 	while (*src)
 		*dest++ = *src++;
 	*dest = *src;
-	return ret;
+	return (ret);
 }
 
 /**
@@ -64,7 +64,7 @@ char *_strdup(const char *str)
 		return (NULL);
 	for (length++; length--;)
 		ret[length] = *--str;
-	return ret;
+	return (ret);
 }
 
 /**
@@ -103,5 +103,5 @@ unsigned int _strspn(char *s, char *accept)
 			return (i);
 	}
 
-	return i;
+	return (i);
 }

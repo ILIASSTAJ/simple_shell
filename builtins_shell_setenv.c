@@ -25,7 +25,7 @@ int shell_setenv(char **args)
 		_puterror("setenv");
 		return (-1);
 	}
-	return 0;
+	return (0);
 }
 
 /**
@@ -51,5 +51,5 @@ int shell_unsetenv(char **args)
 	{
 		_puterror("unsetenv");
 	}
-	return 0;
+	return (0);
 }

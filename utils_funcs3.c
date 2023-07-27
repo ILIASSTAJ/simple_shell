@@ -1,13 +1,13 @@
 #include "shell.h"
 
 /**
- * _atoi: - Converts a string to an integer.
- * @str: The string to convert.
- *
- * Return: The integer value of the string.
+ *_atoi - Converts a string to an integer.
+ *@str: The string to convert.
+ *Return: The integer value of the string.
  */
 int _atoi(const char *str)
 {
+	/*should i comment here?*/
 
 	int i, sign;
 	unsigned int num;
@@ -43,7 +43,7 @@ char *_memset(char *s, char b, unsigned int n)
 
 	for (i = 0; i < n; i++)
 		s[i] = b;
-	return s;
+	return (s);
 }
 
 /**
@@ -63,20 +63,20 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 
 	for (i = 0; i < n; i++)
 		dest[i] = src[i];
-	return dest;
+	return (dest);
 }
 
 /**
- * _realloc : - reallocates a block of memory
- * @ptr: pointer to previous malloc'ated block
- * @old_size: byte size of previous block
- * @new_size: byte size of new block
- *
- * Return: pointer to da ol'block nameen.
+ *_realloc- reallocates a block of memory
+ *@ptr: pointer to previous mallocated block
+ *@old_size: byte size of previous block
+ *@new_size: byte size of new block
+ *return: pointer to da ol'block nameen.
  */
+/*_realloc function */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-
+	/*should i comment here?*/
 	char *p;
 
 	if (!ptr)
@@ -94,7 +94,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	while (old_size--)
 		p[old_size] = ((char *)ptr)[old_size];
 	free(ptr);
-	return p;
+	return (p);
 }
 
 /**
@@ -125,5 +125,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	_memset(p, 0, nmemb * size);
 
-	return p;
+	return (p);
 }

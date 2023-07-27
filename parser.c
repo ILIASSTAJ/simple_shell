@@ -38,7 +38,7 @@ char **tokenize(char *str, const char *delim)
 		return (NULL);
 
 	ret[i] = NULL;
-	return ret;
+	return (ret);
 }
 
 /**
@@ -62,5 +62,5 @@ char **tokenize_input(char *input)
 	tokens = tokenize(tmp, " \t\r\n\a");
 	free(tmp);
 
-	return tokens;
+	return (tokens);
 }

@@ -16,7 +16,7 @@ int _strlen(const char *s)
 
 	while (*s++)
 		i++;
-	return i;
+	return (i);
 }
 
 
@@ -51,8 +51,6 @@ int _strcmp(const char *s1, const char *s2)
  */
 int _strncmp(const char *s1, const char *s2, size_t n)
 {
-	
-	
 	unsigned char c1, c2;
 
 	while (n-- > 0)
@@ -66,7 +64,7 @@ int _strncmp(const char *s1, const char *s2, size_t n)
 			break;
 	}
 
-	return 0;
+	return (0);
 }
 
 /**
@@ -102,7 +100,7 @@ char *_strstr(char *haystack, char *needle)
 			}
 		}
 	}
-	return NULL;
+	return (NULL);
 }
 
 /**
@@ -131,5 +129,5 @@ char *_strchr(char *s, char c)
 	if (*s == c)
 		return (s);
 	/*return null if not found*/
-	return NULL;
+	return (NULL);
 }
