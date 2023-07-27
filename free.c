@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * free_error : - frees alloc'd pointers following system error
+ * free_error - frees alloc'd pointers following system error
  * @argv: pointer to a pointer to an array of pointers
  * @arg: pointer to a pointer to an array of characters
  *
@@ -35,7 +35,7 @@ void free_tokens(char **ptr)
 
 
 /**
- * free_path : - Frees the global variable containing the PATH environment
+ * free_path - Frees the global variable containing the PATH environment
  *              variable value
  *
  * Return: Nothing

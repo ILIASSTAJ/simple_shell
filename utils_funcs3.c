@@ -67,16 +67,16 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 }
 
 /**
- *_realloc- reallocates a block of memory
- *@ptr: pointer to previous mallocated block
- *@old_size: byte size of previous block
- *@new_size: byte size of new block
- *return: pointer to da ol'block nameen.
+ * _realloc -: reallocates a block of memory
+ * @ptr: pointer to previous mallo-cated block
+ * @old_size: byte size of previous block
+ * @new_size: byte size of new block
+ * Return: void  pointer to da ol'block nameen.
  */
-/*_realloc function */
+
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	/*should i comment here?*/
+
 	char *p;
 
 	if (!ptr)

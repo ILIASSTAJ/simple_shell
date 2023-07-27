@@ -1,7 +1,7 @@
  #include "shell.h"
 
 /**
- *check_for_builtins - checks if the command is a builtin
+ *check_for_builtin - checks if the command is a builtin
  *@args: the arguments array
  *it's a simple function
  *should we comment like that?

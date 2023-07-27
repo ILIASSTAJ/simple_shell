@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _strcpy: - copies a string
+ * _strcpy - copies a string
  * @dest: the destination
  * @src: the source
  *
@@ -24,7 +24,7 @@ char *_strcpy(char *dest, char *src)
 }
 
 /**
- * _strcat : - concatenates two strings
+ * _strcat - concatenates two strings
  * @dest: the destination buffer
  * @src: the source buffer
  *
@@ -80,7 +80,7 @@ int _putchar(char c)
 }
 
 /**
- * _strspn: - a function that gets the
+ * _strspn - a function that gets the
  *           length of a prefix substring
  *
  * @s: pointer to string input

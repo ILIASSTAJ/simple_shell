@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * find_in_path:  - Looks for a command in each directory specified in the PATH
+ * find_in_path - Looks for a command in each directory specified in the PATH
  *                environment variable
  * @command: pointer to `command` string to look for.
  *

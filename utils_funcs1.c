@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _strlen :: returns the length of a string
+ * _strlen - returns the length of a string
  * @s: the string whose length to check
  *
  * Return: integer length of string
@@ -68,7 +68,7 @@ int _strncmp(const char *s1, const char *s2, size_t n)
 }
 
 /**
- * _strstr: - checks if needle starts with haystack
+ * _strstr - checks if needle starts with haystack
  * @haystack: string to search
  * @needle: the substring to find
  *
