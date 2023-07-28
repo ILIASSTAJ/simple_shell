@@ -2,7 +2,7 @@
 
 /**
  * is_chain - function that test if current char is a chain delimeter
- * @info: the parameter struct containing arguments
+ * @info: the parameter--- struct containing arguments
  * @buf: the char buffer
  * @p: address of current position in buf
  *
@@ -24,9 +24,9 @@ int is_chain(info_t *info, char *buf, size_t *p)
 		y++;
 		info->cmd_buf_type = CMD_AND;
 	}
-	else if (buf[y] == ';') /* found end of this command */
+	else if (buf[y] == ';') /* found end of-- this command */
 	{
-		buf[y] = 0; /* replace semicolon with null */
+		buf[y] = 0; /* replace semicolon --with null */
 		info->cmd_buf_type = CMD_CHAIN;
 	}
 	else
@@ -38,7 +38,7 @@ int is_chain(info_t *info, char *buf, size_t *p)
 /**
  * check_chain - function that checks chain of string
  * @info: the parameter struct containing arguments
- * @buf: the char buffer
+ * @buf: the char buffer--
  * @p: address of current position in buffer
  * @i: starting position in buffer
  * @len: length of buf
@@ -71,7 +71,7 @@ void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 
 /**
  * replace_alias - function that replaces an aliases in the tokenized string
- * @info: the parameter struct containing arguments
+ * @info: the parameter --struct containing arguments
  *
  * Return: 1 if replaced, 0 otherwise
  */
@@ -100,7 +100,7 @@ int replace_alias(info_t *info)
 
 /**
  * replace_vars - function that replaces vars in tokenized string
- * @info: the parameter struct that contains arguments
+ * @info: the parameter -struct that contains arguments
  *
  * Return: 1 if replaced, 0 otherwise
  */
@@ -142,7 +142,7 @@ int replace_vars(info_t *info)
 /**
  * replace_string - function that replaces a string
  * @old: old string to replace
- * @new: new string to replace @old
+ * @new: new string to re---------place @old
  *
  * Return: 1 if replaced, 0 otherwise
  */

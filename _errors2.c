@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _erratoi - function tht converts  string to  integer
+ * _erratoi - function tht--- converts  string to  integer
  * @str:  string to be converted
  * Return: 0 if no no in string, converted number if worked
  *       -1 on error
@@ -12,7 +12,7 @@ int _erratoi(char *str)
 	unsigned long int result = 0;
 
 	if (*str == '+')
-		str++;  /*   does this make main print 255? */
+		str++;  /*   ---does this make main print 255? */
 	for (j = 0;  str[j] != '\0'; j++)
 	{
 		if (str[j] >= '0' && str[j] <= '9')
@@ -29,10 +29,10 @@ int _erratoi(char *str)
 }
 
 /**
- * print_error - function that prints an error message
+ * print_error - function that prints--- an error message
  * @info:  parameter info struct
  * @est: string containing  error
- * Return: 0 if no numbers in string, converted number if worked
+ * Return: 0 if no numbers in str-ing, converted number if worked
  *        -1 on error
  */
 void print_error(info_t *info, char *est)
@@ -47,7 +47,7 @@ void print_error(info_t *info, char *est)
 }
 
 /**
- * print_d - function tht  prints  decimal number (base 10)
+ * print_d - function tht  prints  decimal--- number (base 10)
  * @inp: input value
  * @fd: filedescriptor to write or modify
  *
@@ -88,7 +88,7 @@ int print_d(int inp, int fd)
 /**
  * convert_number - function that converts  a no
  * @nm: the number
- * @base:  the base
+ * @base:  the base---
  * @flag: the argument flags
  *
  * Return: the string
@@ -123,7 +123,7 @@ char *convert_number(long int nm, int base, int flag)
 
 /**
  * remove_comments - function that replaces the first instance of '#' with null
- * @buff: address of the string that will be modified
+ * @buff: address of t----he string that will be modified
  *
  * Return: Always 0;
  */

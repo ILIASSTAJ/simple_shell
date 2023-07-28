@@ -2,7 +2,7 @@
 
 /**
  * input_buf - function that buffers chained commands
- * @info: parameter struct containing arguments
+ * @info: parameter-- struct containing arguments
  * @buf: address of buffer
  * @len: address of len var
  *
@@ -13,7 +13,7 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
 	ssize_t t = 0;
 	size_t len_p = 0;
 
-	if (!*len) /* if nothing left in the buffer, fill it */
+	if (!*len) /* if noth--ing left in the buffer, fill it */
 	{
 		/*bfree((void **)info->cmd_buf);*/
 		free(*buf);
@@ -45,7 +45,7 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
 }
 
 /**
- * get_input - functioon that gets a line minus the newline
+ * get_input - functioon that g--ets a line minus the newline
  * @info: parameter struct containing arguments
  *
  * Return: bytes read
@@ -61,7 +61,7 @@ ssize_t get_input(info_t *info)
 	t = input_buf(info, &buf, &len);
 	if (t == -1) /* EOF */
 		return (-1);
-	if (len)	/* commands left in the chain buffer */
+	if (len)	/* comman--ds left in the chain buffer */
 	{
 		y = x; /*  new iterator to current buf position */
 		p = buf + x; /* get pointer for return */
@@ -93,7 +93,7 @@ ssize_t get_input(info_t *info)
  * read_buf - function that reads a buffer
  * @info: parameter struct containing argumrnts
  * @buf: buffer
- * @i: size
+ * @i: size---
  *
  * Return: r
  */
@@ -114,7 +114,7 @@ ssize_t read_buf(info_t *info, char *buf, size_t *i)
  * from standard inpput
  * @info: parameter struct containing arguments
  * @ptr: address of pointer to buffer, preallocated or NULL
- * @length: size of preallocated ptr buffer if not NULL
+ * @length: si---ze of preallocated ptr buffer if not NULL
  *
  * Return: s
  */
@@ -161,7 +161,7 @@ int _getline(info_t *info, char **ptr, size_t *length)
  * sigintHandler - function that blocks ctrl copy
  * @sig_num: the signal number
  *
- * Return: void
+ * Return: void--
  */
 void sigintHandler(__attribute__((unused))int sig_num)
 {

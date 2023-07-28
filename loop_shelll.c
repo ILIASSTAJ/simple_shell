@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * hsh - main shell loop function
+ * hsh - main she_ll loop function
  * @info: the parameter & return info struct
  * @av: the argument vector from main() function
  *
@@ -48,7 +48,7 @@ int hsh(info_t *info, char **av)
  * find_builtin - function that finds a builtin command
  * @info: the parameter & return info struct
  *
- * Return: -1 if builtin is not found,
+ * Return: -1 if b--uiltin is not found,
  *	0 if builtin executed successfully,
  *	1 if builtin found but not successful,
  *	-2 if builtin signals exit()
@@ -80,7 +80,7 @@ int find_builtin(info_t *info)
 
 /**
  * find_cmd - function that finds a command in PATH
- * @info: the parameter & return info struct
+ * @info: the parame--ter & return info struct
  *
  * Return: void
  */
@@ -122,7 +122,7 @@ void find_cmd(info_t *info)
 
 /**
  * fork_cmd - function that forks a an exec cmd
- * @info: the parameter & return info struct containing arguments
+ * @info: the paramete--r & return info struct containing arguments
  *
  * Return: void
  */

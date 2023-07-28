@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _myhistory - functions displays history list, .
+ * _myhistory - functions-- displays history list, .
  * @inf: Structure containing potential arguments. maintains
  *        constant function prototype.
  *  Return: Always 0
@@ -15,7 +15,7 @@ int _myhistory(info_t *inf)
 /**
  * unset_alias - function tht sets alias to string
  * @info: it is a parameter struct
- * @str: is the string alias
+ * @str: is the string alia--s
  *
  * Return: Always 0 on success, 1 upon error
  */
@@ -40,7 +40,7 @@ int unset_alias(info_t *info, char *str)
  * @info: is the parameter struct
  * @str1: is the string alias
  *
- * Return: Always 0 on success, 1 upon  error
+ * Return: Always 0 on succes---s, 1 upon  error
  */
 int set_alias(info_t *info, char *str1)
 {
@@ -60,7 +60,7 @@ int set_alias(info_t *info, char *str1)
  * print_alias - function that  prints an alias string
  * @node1: is the alias node
  *
- * Return: Always 0 on success, 1 upon error
+ * Return: Always 0 on success, --1 upon error
  */
 int print_alias(list_t *node1)
 {
@@ -82,7 +82,7 @@ int print_alias(list_t *node1)
 /**
  * _myalias - function that copies the alias in builtin
  * @info: Structure tht has potential arguments.maintains
- *          constant function prototype.
+ *          constant function prot--otype.
  *  Return: Always 0
  */
 int _myalias(info_t *info)

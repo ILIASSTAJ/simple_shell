@@ -2,10 +2,10 @@
 
 /**
  * bfree - function that frees a pointer
- * and NULLs the address
+ * and NULLs the addre--ss
  * @ptr: address of the pointer to free
  *
- * Return: 1 if freed,
+ * Return: 1 if freed,--
  * otherwise return 0.
  */
 int bfree(void **ptr)

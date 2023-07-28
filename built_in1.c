@@ -2,7 +2,7 @@
 
 /**
  * _myexit - exits
- * @info: Structure that has possib;e arguments. Used to maintain
+ * @info: Structure--- that has possib;e arguments. Used to maintain
  *          constant function prototype.
  *  Return: exits with  exit status
  *         (0) when info.argv[0] != "exit"
@@ -30,7 +30,7 @@ int _myexit(info_t *info)
 }
 
 /**
- * _mycd - changes current directory in shell
+ * _mycd - changes current--- directory in shell
  * @info: Structure that has pssible arguments. Used to maintain
  *          constant function prototype.
  *  Return: Always 0
@@ -47,7 +47,7 @@ int _mycd(info_t *info)
 	{
 		dr = _getenv(info, "HOME=");
 		if (!dr)
-			chdir_ret = /* TODO: what should it be? */
+			chdir_ret = /* TO-DO: what should it be? */
 				chdir((dr = _getenv(info, "PWD=")) ? dr : "/");
 		else
 			chdir_ret = chdir(dr);
@@ -61,7 +61,7 @@ int _mycd(info_t *info)
 			return (1);
 		}
 		_puts(_getenv(info, "OLDPWD=")), _putchar('\n');
-		chdir_ret = /* TODO: what should it be? */
+		chdir_ret = /* TO-DO: what should it be? */
 			chdir((dr = _getenv(info, "OLDPWD=")) ? dr : "/");
 	}
 	else
@@ -80,7 +80,7 @@ int _mycd(info_t *info)
 }
 
 /**
- * _myhelp - changes cirrent directory
+ * _myhelp - changes cirrent director--y
  * @info: Structure tht has potential arguments.maintains
  * constant function prototype.
  *  Return: Always 0
