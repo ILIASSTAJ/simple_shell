@@ -71,7 +71,7 @@ The project is organized as follows:
   ├── utils_func1.c
   ├── utils_func2.c
   └── utils_func2.c
- 
+
 AUTHORS file lists the contributors to the project.
 
 README.md file you are currently reading is a brief overview of the project.
@@ -222,4 +222,4 @@ This will create a new file called simple_shell.1. You can view the man page by 
 man ./simple_shell.1
 
 AUTHORS
-This program was written by ILIASS BASR TAJ and ZIENEB MANSSOURI
+This program was written by ILIASS BASR TAJ and ZINEB MANSSOURI
